@@ -1105,3 +1105,480 @@ footer { padding: 25px 0 34px; background: #fff; border-top: 1px solid var(--lin
     display: none;
   }
 }
+/* =====================================================
+   MOBILE FINAL - CORREÇÃO DEFINITIVA
+   ===================================================== */
+
+@media screen and (max-width: 768px) {
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  main,
+  section,
+  header,
+  footer {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .container {
+    width: calc(100% - 28px) !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* =========================
+     HEADER
+  ========================= */
+
+  .site-header {
+    width: 100%;
+    padding: 8px 0 !important;
+  }
+
+  .nav-shell {
+    width: calc(100% - 20px) !important;
+    max-width: none !important;
+    min-height: 56px;
+    margin: 0 auto;
+    padding: 7px 8px !important;
+
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto !important;
+
+    gap: 6px;
+  }
+
+  .desktop-nav {
+    display: none !important;
+  }
+
+  .brand {
+    min-width: 0;
+  }
+
+  .brand-mark {
+    width: 34px;
+    height: 34px;
+    flex: 0 0 34px;
+  }
+
+  .brand-copy {
+    min-width: 0;
+  }
+
+  .brand-copy strong {
+    font-size: .72rem;
+    white-space: nowrap;
+  }
+
+  .brand-copy small {
+    display: none;
+  }
+
+  .nav-shell > .btn {
+    min-height: 38px !important;
+    padding: 0 10px !important;
+    font-size: .67rem !important;
+    white-space: nowrap;
+  }
+
+
+  /* =========================
+     HERO
+  ========================= */
+
+  .hero {
+    width: 100%;
+    min-height: auto !important;
+    padding: 90px 0 40px !important;
+    overflow: hidden;
+  }
+
+  .hero-grid {
+    width: 100%;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+
+  .hero-copy,
+  .hero-visual {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .hero-copy {
+    text-align: center;
+  }
+
+  .hero h1 {
+    width: 100%;
+    max-width: 100% !important;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 2.75rem !important;
+    line-height: .96 !important;
+    letter-spacing: -.055em !important;
+
+    overflow-wrap: break-word;
+  }
+
+  .hero-lead {
+    width: 100%;
+    max-width: 100% !important;
+
+    margin: 18px auto 0 !important;
+
+    font-size: .94rem !important;
+    line-height: 1.6 !important;
+  }
+
+  .hero-actions {
+    width: 100%;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 9px;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+
+  /* =========================
+     FOTO DO JORGE
+  ========================= */
+
+  .hero-visual {
+    min-height: 420px !important;
+    height: 420px !important;
+    margin: 0 auto;
+    overflow: visible;
+  }
+
+  .portrait-stage {
+    width: 100% !important;
+    max-width: 330px !important;
+    height: 420px !important;
+
+    margin: 0 auto !important;
+  }
+
+  .portrait-card {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .portrait-image-wrap {
+    position: absolute !important;
+
+    inset: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    overflow: visible !important;
+  }
+
+  .portrait-image-wrap img {
+    position: absolute !important;
+
+    left: 50% !important;
+    top: 50% !important;
+
+    height: 400px !important;
+    width: auto !important;
+    max-width: 100% !important;
+
+    transform: translate(-50%, -50%) !important;
+
+    object-fit: contain !important;
+
+    display: block !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .badge-top {
+    left: 0 !important;
+    top: 40px !important;
+  }
+
+  .badge-bottom {
+    right: 0 !important;
+    bottom: 55px !important;
+  }
+
+  .portrait-badge {
+    max-width: 170px;
+    padding: 8px 10px !important;
+  }
+
+  .portrait-badge strong {
+    font-size: .65rem !important;
+  }
+
+  .portrait-badge small {
+    display: none !important;
+  }
+
+
+  /* =========================
+     CARRINHOS
+  ========================= */
+
+  .car-lane {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 70px !important;
+
+    overflow: hidden !important;
+  }
+
+  .car-lane-top {
+    top: 105px !important;
+  }
+
+  .car-lane-bottom {
+    bottom: 80px !important;
+  }
+
+  .car-pass {
+    width: 115px !important;
+    height: 60px !important;
+  }
+
+  .car-pass-b,
+  .car-pass-c {
+    display: none !important;
+  }
+
+
+  /* =========================
+     SOBRE
+  ========================= */
+
+  .about-section {
+    width: 100% !important;
+    padding: 55px 0 !important;
+    overflow: hidden;
+  }
+
+  .about-grid {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    gap: 22px !important;
+  }
+
+  .about-title,
+  .about-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .about-title h2 {
+    width: 100%;
+    max-width: 100% !important;
+
+    margin: 0;
+
+    font-size: 2.65rem !important;
+    line-height: .96 !important;
+    letter-spacing: -.055em;
+
+    overflow-wrap: break-word;
+  }
+
+  .about-content > p {
+    width: 100%;
+    max-width: 100% !important;
+
+    margin: 0;
+
+    font-size: .92rem !important;
+    line-height: 1.65 !important;
+  }
+
+  .about-numbers {
+    width: 100% !important;
+
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+
+    gap: 7px !important;
+
+    margin-top: 20px !important;
+  }
+
+  .about-numbers div {
+    width: 100%;
+    min-width: 0;
+
+    padding: 13px 5px !important;
+
+    text-align: center;
+  }
+
+  .about-numbers strong {
+    font-size: 1.05rem !important;
+  }
+
+  .about-numbers span {
+    font-size: .54rem !important;
+  }
+
+
+  /* =========================
+     DEPOIMENTOS
+  ========================= */
+
+  .testimonials {
+    width: 100% !important;
+    padding: 55px 0 !important;
+  }
+
+  .section-heading {
+    width: 100%;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+
+    gap: 12px !important;
+  }
+
+  .section-heading > div,
+  .section-heading > p {
+    width: 100%;
+    max-width: 100% !important;
+  }
+
+  .section-heading h2 {
+    font-size: 2.8rem !important;
+  }
+
+  .testimonial-grid {
+    width: 100%;
+
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+
+    gap: 14px !important;
+  }
+
+  .testimonial-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+
+  /* =========================
+     CTA FINAL
+  ========================= */
+
+  .contact-cta {
+    width: 100%;
+    padding: 0 0 60px !important;
+  }
+
+  .contact-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+
+    gap: 22px !important;
+
+    padding: 30px 20px !important;
+
+    border-radius: 22px !important;
+
+    overflow: hidden !important;
+  }
+
+  .contact-card > div {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .contact-card h2 {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+
+    margin: 0 !important;
+
+    font-size: 2.25rem !important;
+    line-height: 1 !important;
+    letter-spacing: -.045em !important;
+
+    white-space: normal !important;
+
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+  }
+
+  .contact-card p {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    font-size: .9rem !important;
+    line-height: 1.6 !important;
+  }
+
+  .contact-card .btn {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+
+  /* =========================
+     FOOTER
+  ========================= */
+
+  footer {
+    width: 100%;
+  }
+
+  .footer-grid {
+    width: 100%;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+
+    gap: 10px !important;
+  }
+
+
+  .scroll-cue {
+    display: none !important;
+  }
+}
