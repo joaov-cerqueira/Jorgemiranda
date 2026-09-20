@@ -168,8 +168,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 .hero {
   position: relative;
-  min-height: 100svh;
-  padding: 150px 0 100px;
+  min-height: auto;
+  padding: 125px 0 55px;
   display: grid;
   align-items: center;
   isolation: isolate;
@@ -278,14 +278,14 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 .hero-visual {
   position: relative;
-  min-height: 640px;
+  min-height: 540px;
   display: grid;
   place-items: center;
   perspective: 1200px;
 }
 .portrait-stage {
-  width: min(100%, 480px);
-  height: 620px;
+  width: min(100%, 470px);
+  height: 540px;
   perspective: 1100px;
   position: relative;
 }
