@@ -612,6 +612,10 @@ footer { padding: 25px 0 34px; background: #fff; border-top: 1px solid var(--lin
 .reveal.is-visible { opacity: 1; transform: translateY(0); }
 
 @media (max-width: 980px) {
+  .about-grid {
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
   .desktop-nav { display: none; }
   .nav-shell { grid-template-columns: 1fr auto; }
   .hero { padding-top: 135px; }
@@ -633,6 +637,13 @@ footer { padding: 25px 0 34px; background: #fff; border-top: 1px solid var(--lin
 }
 
 @media (max-width: 650px) {
+  .about-section {
+  padding: 65px 0;
+}
+
+.about-numbers {
+  grid-template-columns: 1fr;
+}
   .container { width: min(calc(100% - 24px), var(--container)); }
   .site-header { padding-top: 10px; }
   .nav-shell { padding-left: 10px; border-radius: 17px; gap: 10px; }
@@ -674,4 +685,68 @@ footer { padding: 25px 0 34px; background: #fff; border-top: 1px solid var(--lin
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   .reveal { opacity: 1; transform: none; }
+}
+.about-section {
+  padding: 85px 0;
+  background: #ffffff;
+  scroll-margin-top: 100px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.about-title h2 {
+  margin: 0;
+  max-width: 620px;
+  font-size: clamp(2.5rem, 4.8vw, 4.6rem);
+  line-height: 1;
+  letter-spacing: -.055em;
+}
+
+.about-title h2 em {
+  display: block;
+  margin-top: 7px;
+  font-style: normal;
+  color: var(--blue);
+}
+
+.about-content > p {
+  margin: 0;
+  max-width: 580px;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.about-numbers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.about-numbers div {
+  padding: 20px 14px;
+  border: 1px solid rgba(9,19,34,.08);
+  border-radius: 18px;
+  background: #f7faff;
+}
+
+.about-numbers strong {
+  display: block;
+  color: var(--blue);
+  font-size: 1.65rem;
+  letter-spacing: -.04em;
+}
+
+.about-numbers span {
+  display: block;
+  margin-top: 5px;
+  color: #758293;
+  font-size: .75rem;
+  line-height: 1.4;
 }
