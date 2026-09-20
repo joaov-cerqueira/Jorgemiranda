@@ -545,21 +545,37 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .testimonial-card > p { margin: 0; font-size: .82rem; font-weight: 760; }
 .testimonial-card > p small { color: #8490a0; font-weight: 500; }
 
-.contact-cta { padding: 0 0 110px; background: #fff; }
+.contact-cta {
+  padding: 30px 0 80px;
+  background: #fff;
+}
 .contact-card {
   position: relative;
   overflow: hidden;
-  min-height: 340px;
+
+  width: 100%;
+  min-height: 0;
+
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
-  gap: 36px;
-  padding: clamp(34px, 6vw, 72px);
-  border-radius: 34px;
+
+  gap: 60px;
+
+  padding: 60px 70px;
+
+  border-radius: 32px;
+
   color: #fff;
+
   background:
-    linear-gradient(135deg, rgba(7,17,31,.98), rgba(9,37,74,.98));
-  box-shadow: 0 32px 80px rgba(7,17,31,.2);
+    linear-gradient(
+      135deg,
+      rgba(7,17,31,.98),
+      rgba(9,37,74,.98)
+    );
+
+  box-shadow: 0 32px 80px rgba(7,17,31,.20);
 }
 .contact-card::before {
   content: "";
@@ -1081,21 +1097,21 @@ footer { padding: 25px 0 34px; background: #fff; border-top: 1px solid var(--lin
     padding: 0 0 70px;
   }
 
-  .contact-card {
-    grid-template-columns: 1fr;
-    gap: 24px;
-    min-height: auto;
+.contact-card {
+  display: flex !important;
+  flex-direction: column !important;
 
-    padding: 32px 22px;
-    border-radius: 24px;
-  }
+  padding: 28px 20px !important;
+  gap: 22px !important;
+}
+
+.contact-card .btn {
+  width: 100% !important;
+  min-width: 0 !important;
+}
 
   .contact-card h2 {
     font-size: clamp(2.2rem, 10vw, 3rem);
-  }
-
-  .contact-card .btn {
-    width: 100%;
   }
 
 
@@ -1521,43 +1537,48 @@ footer { padding: 25px 0 34px; background: #fff; border-top: 1px solid var(--lin
 
     overflow: hidden !important;
   }
+.contact-card > div:not(.contact-glow) {
+  position: relative;
+  z-index: 2;
 
-  .contact-card > div {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-  }
+  width: 100%;
+  max-width: 720px;
+}
 
   .contact-card h2 {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
+  margin: 0;
 
-    margin: 0 !important;
+  max-width: 700px;
 
-    font-size: 2.25rem !important;
-    line-height: 1 !important;
-    letter-spacing: -.045em !important;
+  font-size: clamp(2.7rem, 4vw, 4.3rem);
+  line-height: .98;
 
-    white-space: normal !important;
+  letter-spacing: -.055em;
 
-    overflow-wrap: break-word !important;
-    word-break: normal !important;
-  }
+  white-space: normal;
+}
+ .contact-card p:not(.eyebrow) {
+  max-width: 620px;
 
-  .contact-card p {
-    width: 100% !important;
-    max-width: 100% !important;
+  margin: 18px 0 0;
 
-    font-size: .9rem !important;
-    line-height: 1.6 !important;
-  }
+  color: #b9c8d9;
 
-  .contact-card .btn {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
+  line-height: 1.7;
+}
 
+.contact-card .btn {
+  position: relative;
+  z-index: 2;
+
+  width: auto;
+  min-width: 210px;
+
+  justify-self: end;
+  align-self: center;
+
+  white-space: nowrap;
+}
 
   /* =========================
      FOOTER
