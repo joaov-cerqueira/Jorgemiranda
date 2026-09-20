@@ -293,26 +293,30 @@ button, a { -webkit-tap-highlight-color: transparent; }
   --rx: 0deg;
   --ry: 0deg;
   position: relative;
+  width: 100%;
   height: 100%;
-  border-radius: 34px;
   transform-style: preserve-3d;
   transform: rotateX(var(--rx)) rotateY(var(--ry));
   transition: transform .16s ease-out;
-  background: linear-gradient(145deg, rgba(255,255,255,.96), rgba(231,240,252,.92));
-  border: 1px solid rgba(5,104,255,.18);
-  box-shadow: 0 40px 100px rgba(16,48,91,.19), inset 0 0 0 1px rgba(255,255,255,.65);
   overflow: visible;
 }
 .portrait-card::before {
   content: "";
   position: absolute;
-  inset: 14px;
-  border-radius: 25px;
+  left: 50%;
+  top: 48%;
+  width: 76%;
+  height: 76%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
   z-index: 0;
-  background:
-    radial-gradient(circle at 50% 20%, rgba(63,157,255,.22), transparent 33%),
-    linear-gradient(180deg, rgba(255,255,255,.8), rgba(225,238,253,.78));
-  border: 1px solid rgba(255,255,255,.7);
+  background: radial-gradient(
+    circle,
+    rgba(56,150,255,.23) 0%,
+    rgba(56,150,255,.08) 34%,
+    rgba(56,150,255,0) 72%
+  );
+  filter: blur(10px);
 }
 .portrait-card::after {
   content: "";
@@ -339,30 +343,21 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 .portrait-image-wrap {
   position: absolute;
-  inset: 14px;
-  border-radius: 25px;
-  overflow: hidden;
-  transform: translateZ(46px);
-}
-.portrait-image-wrap::after {
-  content: "";
-  position: absolute;
   inset: 0;
-  background:
-    linear-gradient(to top, rgba(7,17,31,.44) 0%, rgba(7,17,31,0) 35%),
-    radial-gradient(circle at 50% 40%, transparent 20%, rgba(5,38,80,.08) 100%);
-  pointer-events: none;
+  overflow: visible;
+  transform: translateZ(54px);
+  z-index: 3;
 }
 .portrait-image-wrap img {
   position: absolute;
-  width: 190%;
+  height: 100%;
+  width: auto;
   max-width: none;
-  height: 150%;
-  left: -76%;
-  top: -25%;
-  object-fit: cover;
-  object-position: 83% 43%;
-  filter: saturate(.94) contrast(1.04);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: contain;
+  filter: drop-shadow(0 28px 42px rgba(7,17,31,.18));
 }
 
 .portrait-badge {
@@ -398,19 +393,99 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .pulse-dot { width: 11px; height: 11px; border-radius: 50%; background: var(--success); box-shadow: 0 0 0 5px rgba(22,167,102,.13); animation: pulse 2s infinite; }
 @keyframes pulse { 0%,100% { box-shadow: 0 0 0 5px rgba(22,167,102,.12); } 50% { box-shadow: 0 0 0 10px rgba(22,167,102,.02); } }
 
-.orbit {
+.car-lane {
   position: absolute;
-  left: 50%;
-  top: 50%;
-  border: 1px solid rgba(5,104,255,.14);
-  border-radius: 50%;
+  left: 0;
+  right: 0;
+  height: 110px;
   pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
 }
-.orbit-one { width: 560px; height: 310px; transform: translate(-50%,-50%) rotate(-20deg); animation: orbitA 16s linear infinite; }
-.orbit-two { width: 620px; height: 360px; transform: translate(-50%,-50%) rotate(25deg); border-color: rgba(5,104,255,.08); animation: orbitB 20s linear infinite reverse; }
-.orbit::after { content: ""; position: absolute; width: 8px; height: 8px; border-radius: 50%; top: 48%; left: -4px; background: #2a8bff; box-shadow: 0 0 20px rgba(42,139,255,.9); }
-@keyframes orbitA { to { transform: translate(-50%,-50%) rotate(340deg); } }
-@keyframes orbitB { to { transform: translate(-50%,-50%) rotate(385deg); } }
+
+.car-lane::before {
+  content: "";
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  top: 50%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(5,104,255,0),
+    rgba(5,104,255,.18),
+    rgba(5,104,255,0)
+  );
+}
+
+.car-lane-top {
+  top: 165px;
+}
+
+.car-lane-bottom {
+  bottom: 125px;
+}
+
+.car-pass {
+  position: absolute;
+  width: 168px;
+  height: 74px;
+  top: 50%;
+  margin-top: -37px;
+  opacity: .72;
+  filter: drop-shadow(0 8px 18px rgba(5,104,255,.14));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 90'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1'%3E%3Cstop stop-color='%239fd1ff'/%3E%3Cstop offset='1' stop-color='%230568ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M18 60h16l17-20c7-8 18-13 29-13h55c13 0 24 5 33 14l13 14h17c5 0 9 4 9 9v7h-13c-3 11-13 19-25 19s-22-8-25-19H74c-3 11-13 19-25 19s-22-8-25-19H12V66c0-3 3-6 6-6Z' fill='none' stroke='url(%23g)' stroke-width='3'/%3E%3Ccircle cx='49' cy='71' r='13' fill='none' stroke='url(%23g)' stroke-width='3'/%3E%3Ccircle cx='170' cy='71' r='13' fill='none' stroke='url(%23g)' stroke-width='3'/%3E%3Cpath d='M71 28h58c10 0 19 4 27 11l9 10H50l12-13c3-4 6-6 9-8Z' fill='none' stroke='url(%23g)' stroke-width='3'/%3E%3C/svg%3E");
+}
+
+.car-pass-a {
+  left: -30%;
+  animation: driveRight 17s linear infinite;
+}
+
+.car-pass-b {
+  left: 108%;
+  width: 145px;
+  opacity: .5;
+  animation: driveLeft 13s linear infinite 2s;
+}
+
+.car-pass-c {
+  left: -34%;
+  width: 142px;
+  opacity: .45;
+  animation: driveRight 12s linear infinite 3s;
+}
+
+.car-pass-d {
+  left: 106%;
+  width: 180px;
+  opacity: .65;
+  animation: driveLeft 18s linear infinite;
+}
+
+@keyframes driveRight {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(960px);
+  }
+}
+
+@keyframes driveLeft {
+  from {
+    transform: translateX(0) scaleX(-1);
+  }
+
+  to {
+    transform: translateX(-980px) scaleX(-1);
+  }
+}
 
 .scroll-cue {
   position: absolute;
