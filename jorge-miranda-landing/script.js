@@ -3,7 +3,7 @@
    Exemplo Brasil: 5521999999999 (55 + DDD + número)
    ========================================================= */
 const CONFIG = {
-  whatsapp: "55SEUNUMERO",
+  whatsapp: "5521964133756",
   mensagem: "Olá Jorge! Vi seu site e gostaria de falar sobre um Volkswagen."
 };
 
